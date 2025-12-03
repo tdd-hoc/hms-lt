@@ -1,0 +1,38 @@
+# --- Quan trọng: Bảo mật ---
+.env
+.env.*
+*.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environment (Môi trường ảo) ---
+# Tùy theo cách bạn đặt tên thư mục venv
+venv/
+.venv/
+env/
+ENV/
+
+# --- IDE (Cấu hình của trình soạn thảo code) ---
+.vscode/
+.idea/
+*.swp
+
+# --- Database (Nếu có dùng SQLite để test hoặc file tạm) ---
+*.sqlite3
+*.db
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# --- Logs ---
+*.log
+
+# --- System ---
+Thumbs.db
+Desktop.ini

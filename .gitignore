@@ -1,0 +1,43 @@
+# ===========================
+# 1. HỆ THỐNG & IDE (File rác của máy tính)
+# ===========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# ===========================
+# 2. BACKEND (Python/FastAPI)
+# ===========================
+# Bỏ qua môi trường ảo (đang nằm trong thư mục backend)
+backend/venv/
+venv/
+.venv/
+
+# Bỏ qua file biên dịch Python (sinh ra khi chạy code)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Bỏ qua file chứa mật khẩu/cấu hình nhạy cảm
+backend/.env
+.env
+
+# Bỏ qua cache khi chạy test
+.pytest_cache/
+
+# ===========================
+# 3. FRONTEND (ReactJS/NodeJS)
+# ===========================
+# Thư mục thư viện (Rất nặng - Tuyệt đối không up)
+frontend/node_modules/
+node_modules/
+
+# Thư mục build (sinh ra khi deploy)
+frontend/dist/
+dist/
+build/
+
+# File môi trường frontend (nếu có)
+frontend/.env.local
