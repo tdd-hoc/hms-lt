@@ -1,0 +1,10 @@
+# file này để xoá các file rác
+
+node_modules
+venv
+__pycache__
+.git
+.gitignore
+.env
+dist
+build

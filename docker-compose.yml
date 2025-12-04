@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # 1. Database
+  db:
+    image: mariadb:10.6
+
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: hmslt
+    ports:
+      - "3307:3306" # Map port 3307 ngoài máy -> 3306 trong container (tránh đụng MySQL máy bạn)
+    volumes:
+      - db_data:/var/lib/mysql
+
+  # 2. Backend
+  backend:
+    build: ./backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db # Tên service database ở trên
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=hmslt
+      - SECRET_KEY=changethis
+    depends_on:
+      - db
+
+  # 3. Frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80" # Nginx chạy port 80, map ra ngoài 5173
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
