@@ -1,0 +1,155 @@
+website vừa quản lý nội bộ và vừa dành cho khách đặt phòng 
+
+
+mục tiêu là website có chức năng đặt phòng 
+
+
+phần admin sẽ quản lý thu chi quán lý khách, phòng và hoá đơn
+
+có phần quyền admin à nhân viên lễ tân 
+
+nhân viên có chức năng tra cưu phòng và xem khach hàng có đặt phòng hay chưa và có quyền chọn đặt phòng cho khách nếu chưa đặt phòng qua trang web 
+khách hàng cho sẽ được xem phòng hình ảnh phòng chức năng đặt phòng                                                                                 /
+quản lý khách sạn sẽ quản lý toàn bộ các chức năng của trang web bao gồm thu chi và số lượng khách hàngd đã đặt phòng...     
+
+những chức năng:
+
+. Yêu cầu cho khách hàng (nếu website phục vụ khách)
+
+Xem danh sách phòng
+
+Xem chi tiết phòng (tiện nghi, giá, hình ảnh)
+
+Kiểm tra tình trạng phòng trống
+
+Tìm kiếm theo: ngày, loại phòng, giá
+
+Đặt phòng
+
+Thanh toán online (Momo, VNPay, Visa…)
+
+Nhận email/xác nhận đặt phòng
+
+Hủy đặt phòng
+
+Tài khoản khách hàng:
+
+login / register
+
+xem lịch sử đặt phòng
+
+B. Yêu cầu cho lễ tân / nhân viên
+
+Quản lý phòng
+
+Tạo loại phòng
+
+Quản lý trạng thái phòng (trống / đã đặt / đang dọn / bảo trì)
+
+Quản lý khách
+
+Thông tin khách check-in / check-out
+
+Quản lý đặt phòng
+
+tạo booking mới cho khách trực tiếp
+
+sửa / hủy booking
+
+Quản lý thanh toán
+
+hóa đơn
+
+phụ phí
+
+giảm giá
+
+Dashboard tình trạng phòng theo thời gian thực
+
+C. Yêu cầu cho admin / quản lý
+
+Quản lý người dùng (nhân viên, lễ tân…)
+
+Xem báo cáo:
+
+doanh thu theo ngày/tháng/năm
+
+tỉ lệ phòng trống
+
+lượng khách đến
+
+Quản lý hệ thống:
+
+thiết lập giá phòng
+
+cấu hình khuyến mãi
+
+phân quyền user   
+
+
+
+
+có teher thêm chức năng như chat với lễ tân và Lịch dọn phòng
+
+Tự động gửi email nhắc check-in
+
+
+về phần hiệu năng thì cần nhưunxg chức năng :
+
+Hiệu năng
+
+500–2000 người dùng cùng lúc
+
+Tìm phòng < 1 giây
+
+API phản hồi < 300ms
+
+Bảo mật
+
+Admin có panel riêng
+
+Nhân viên không thấy báo cáo doanh thu
+
+Mật khẩu phải hash (BCrypt)
+
+JWT access/refresh token
+
+Phân quyền RBAC rõ ràng
+
+Khả dụng
+
+Website chạy 24/7
+
+Backup dữ liệu mỗi 24h
+
+Có cơ chế chống double booking
+hổ trợ tiếng anh và tiếng việt
+
+
+sử lý hệ thống dữ liệu gồm:
+Thông tin phòng
+
+Thông tin khách
+
+Lịch sử booking
+
+Trạng thái phòng
+
+Hóa đơn
+
+Lịch sử thanh toán
+
+Nhật ký hệ thống (audit log)
+
+thêm chức năng là khách hàng có thể xem thêm các địa danh nổi tiếng ở gần khách sản cũng như trung tâm trung tâm bao nhiêu km
+
+gần sân bay, ga tàu, bến xe
+
+
+có thể thêm chức năng xem giá Giá theo:
+– mùa cao điểm / thấp điểm
+– cuối tuần
+– Lễ, Tết
+
+
+đây là yêu cầu thì dựa vào yêu cầu này sẽ từng bước build một web app hoàn chỉnh 
