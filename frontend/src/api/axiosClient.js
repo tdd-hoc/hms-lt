@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // Tạo một instance của Axios với cấu hình mặc định
 const axiosClient = axios.create({
-    baseURL: 'http://localhost:8000/api/v1', // Đường dẫn gốc tới Backend FastAPI của bạn
+    // baseURL: 'http://localhost:8000/api/v1', <--- Cũ (Local)
+    baseURL: 'https://hms-longtime-d6bhapazfye9g6fx.eastasia-01.azurewebsites.net/api/v1', // <--- Mới (Azure) // Đường dẫn gốc tới Backend FastAPI của bạn
     headers: {
         'Content-Type': 'application/json',
     },
